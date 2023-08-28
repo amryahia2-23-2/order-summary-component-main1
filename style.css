@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --font-size-para: 16px;
+}
+
+body {
+    background-color: var(--Pale-blue);
+}
+
+.contanier {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.img-contanier img {
+    width: 100%;
+    height: fit-content;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.text-contanier {
+    padding: 20px;
+    text-align: center;
+}
+
+.row1 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--Dark-blue);
+    margin-bottom: 20px;
+}
+
+h1+p {
+    font-size: var(--font-size-para);
+    color: var(--Desaturated-blue);
+}
+
+.row2 {
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.row2 img {
+    margin-right: 20px;
+}
+
+.row2 a {
+    margin-left: 20px;
+    position: absolute;
+    right: -50px;
+    left: 50%;
+    font-size: var(--font-size-para);
+    font-weight: 700;
+    color: var(--Bright-blue);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        color: hsl(225deg 79.83% 72.02%);
+
+    }
+
+}
+
+.row2 p:nth-of-type(1) {
+    color: var(--Dark-blue);
+    font-size: 18px;
+
+}
+
+.row2 p:nth-of-type(2) {
+    color: var(--Desaturated-blue);
+    font-size: 18px;
+}
+
+
+.row3 button:nth-of-type(1) {
+    display: block;
+    padding: 15px;
+    margin: 10px auto;
+    width: 100%;
+    background-color: var(--Bright-blue);
+    outline: transparent;
+    border-radius: 20px;
+    border-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 9px 20px hsl(224, 23%, 55%);
+
+    &:hover {
+        background-color: hsl(225deg 79.83% 72.02%);
+
+    }
+}
+
+.row3 button:nth-of-type(2) {
+    display: block;
+    padding: 15px;
+    margin: 10px auto;
+    width: 100%;
+    background-color: transparent;
+    outline: transparent;
+    border-radius: 20px;
+    border-color: transparent;
+    color: var(--Desaturated-blue);
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--Dark-blue);
+
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contanier {
+        width: 325px;
+        height: 570px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    h1+p {
+        padding: 10px;
+    }
+
+}
